@@ -1,0 +1,122 @@
+
+{% extends 'index.html' %}
+{% load static %}
+
+{%block active%} active {%endblock%}
+{%block statistic%} active {%endblock%}
+{% block page %}
+
+
+<!-- Start Page Title Area -->
+		<div class="page-title-area bg-7">
+			<div class="container">
+				<div class="page-title-content">
+					<h2></h2>
+
+					<ul>
+						<li>
+							<a href="{% url 'home' %}">
+							</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- End Page Title Area -->
+
+
+<!-- Start Counter Area -->
+		<section class="counter-area bg-color-171717 pt-100 pb-70">
+			<div class="container">
+				<span class="counter-title">Статистика:</span>
+
+				<div class="row">
+					<div class="col-lg-3 col-sm-6">
+						<div class="single-counter">
+							<h2>
+								<span class="odometer" data-count="145792">00</span>
+								<span class="target"> ☹</span>
+							</h2>
+							<h4>Нарушены трудовые права по КР</h4>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-sm-6">
+						<div class="single-counter">
+							<h2>
+								<span class="odometer" data-count="86430">00</span>
+								<span class="target">✔</span>
+							</h2>
+							<h4>Довольных граждан по КР</h4>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-sm-6">
+						<div class="single-counter">
+							<h2>
+								<span class="odometer" data-count="158">00</span>
+								<span class="target">✎</span>
+							</h2>
+							<h4>Обращений в день</h4>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-sm-6">
+						<div class="single-counter">
+							<h2>
+								<span class="odometer" data-count="1.764">00</span>
+								<span class="target">€</span>
+							</h2>
+							<h4>Рост ЗП в месяц по КР</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Counter Area -->
+
+<section class="our-values-area pt-100 pb-70">
+			<div class="container">
+				<div class="section-title">
+					<h2>Большая татистика по КР:</h2>
+				</div>
+
+				<div class="row justify-content-center">
+					<div class="col-lg-3 col-sm-6">
+						<div class="single-values box-none">
+							<i class="flaticon-intersection"></i>
+							<h3><span>5001</span> Заявлений</h3>
+							<p>Vivamus magna justo, lacinia eget consectetur sed, convallis tellus. Nulla libero malesuada.</p>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-sm-6">
+						<div class="single-values box-none">
+							<i class="flaticon-law-book"></i>
+							<h3><span>2012</span> Нарушений</h3>
+							<p>Vivamus magna justo, lacinia eget consectetur sed, convallis tellus. Nulla libero malesuada.</p>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-sm-6">
+						<div class="single-values box-none">
+							<i class="flaticon-honesty"></i>
+							<h3><span>23</span> Проектов</h3>
+							<p>Vivamus magna justo, lacinia eget consectetur sed, convallis tellus. Nulla libero malesuada.</p>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-sm-6">
+						<div class="single-values box-none">
+							<i class="flaticon-trust"></i>
+							<h3><span>24</span> Сотрудников</h3>
+							<p>Vivamus magna justo, lacinia eget consectetur sed, convallis tellus. Nulla libero malesuada.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+{%endblock%}

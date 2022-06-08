@@ -1,0 +1,157 @@
+
+{% extends 'index.html' %}
+{% load static %}
+
+{%block mail%} active {%endblock%}
+
+{% block page %}
+
+
+<!-- Start Page Title Area -->
+		<div class="page-title-area bg-2">
+			<div class="container">
+				<div class="page-title-content">
+					<h2></h2>
+
+					<ul>
+						<li>
+							<a href="{% url 'home' %}">
+
+							</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- End Page Title Area -->
+
+
+	<!-- Start Our Request Form Area -->
+		<section class="request-form-area bg-removed style-four ptb-100">
+			<div class="container">
+				<div class="row">
+					<div class="main-content-text">
+					<h3 align="center">Уважаемые пользователи сайта!
+Вас приветствует Портал, где Вы можете направлять свои интернет - обращения в адрес Службы по контролю и надзору трудового законодательства.</h3>
+
+					<div class="gap-20"></div>
+
+
+				</div>
+					<div class="request-form m-auto">
+
+						{% if messages %}
+                        {% for message in messages %}
+                        <h4 align="center" style="color: green;" {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</h4>
+						{% endfor %}
+						{% else %}
+						{% endif %}
+
+						<form action="{% url 'v3_create' %}" method="POST" enctype="multipart/form-data">
+						{% csrf_token %}
+						  {% for field in form %}
+						  {{ field.error }}
+						  {% endfor %}
+							<div class="row">
+
+								<div class="col-lg-6 col-sm-6">
+									<div class="form-group">
+										<fieldset>
+										<input name="organ" type="text" class="form-control" placeholder="Организация" required="">
+										</fieldset>
+									</div>
+								</div>
+								<div class="col-lg-6 col-sm-6">
+									<div class="form-group">
+										<fieldset>
+										<input name="inn" type="text" class="form-control" placeholder="ИНН" required="">
+										</fieldset>
+									</div>
+								</div>
+								<div class="col-lg-6 col-sm-6">
+									<div class="form-group">
+										<fieldset>
+										<input name="position" type="text" class="form-control" placeholder="Должность" required="">
+										</fieldset>
+									</div>
+								</div>
+
+								<div class="col-lg-6 col-sm-6">
+									<div class="form-group">
+										<fieldset>
+										<input name="first_name" type="text" class="form-control" placeholder="Фамилия" required="">
+										</fieldset>
+									</div>
+								</div>
+
+								<div class="col-lg-6 col-sm-6">
+									<div class="form-group">
+										<fieldset>
+										<input name="name" type="text" class="form-control" placeholder="Имя" required="">
+										</fieldset>
+									</div>
+								</div>
+
+								<div class="col-lg-6 col-sm-6">
+									<div class="form-group">
+										<fieldset>
+										<input name="last_name" type="text" class="form-control" placeholder="Отчество" >
+										</fieldset>
+									</div>
+								</div>
+
+								<div class="col-lg-6 col-sm-6">
+									<div class="form-group">
+										<fieldset>
+										<input name="email" type="text" class="form-control" placeholder="e-mail" required="">
+										</fieldset>
+									</div>
+								</div>
+								<div class="col-lg-6 col-sm-6">
+									<div class="form-group">
+										<fieldset>
+										<input name="phone" type="text" class="form-control" placeholder="Телефон" required="">
+										</fieldset>
+									</div>
+								</div>
+								<div class="col-lg-6 col-sm-6">
+									<div class="form-group">
+										<fieldset>
+										<input name="address" type="text" class="form-control" placeholder="Адрес" required="">
+										</fieldset>
+									</div>
+								</div>
+								<div class="col-lg-12 col-sm-6">
+									<div class="form-group">
+										<fieldset>
+										<input name="file" type="file" class="form-control" placeholder="Прикрепить файл">
+										</fieldset>
+									</div>
+								</div>
+
+								<div class="col-12">
+									<div class="form-group">
+										<fieldset>
+										<textarea name="text" class="form-control" rows="6" placeholder="Текст" required=""></textarea>
+										</fieldset>
+									</div>
+								</div>
+
+								<div class="col-12">
+									<div class="form-group mb-0">
+										<button type="submit" class="default-btn">
+											Отправить обращение
+											<i class="ri-arrow-right-line"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Our Request Form Area -->
+
+{%endblock%}

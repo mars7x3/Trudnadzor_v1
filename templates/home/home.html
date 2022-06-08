@@ -1,0 +1,343 @@
+{% extends 'index.html' %}
+{% load static %}
+{%block home%} active {%endblock%}
+
+
+{% block page %}
+
+
+<section class="banner-area">
+
+    <div id="background-video">
+        <video width="100%" autoplay loop muted>
+            <source src="{% static 'assets/video/video-bg2.mp4' %}" type="video/mp4">
+        </video>
+        <div class="bg_overlay"></div>
+    </div>
+    <!-- Start Attorney Details Area -->
+    <div class="container2">
+
+        <div class="row" style="padding: 36px; ">
+
+            <div class="col-lg-3" style=" background: #05122d">
+                <div align="center" class="attorney-details" style="padding: 10px; ">
+                    <img src="{% static 'assets/images/logo.png' %}" alt="Image">
+                </div>
+                <div class="attorney-details" style="padding: 10px; ">
+                    <img src="{% static 'assets/images/customers/IMG_0820.JPG' %}" alt="Image">
+                    <div class="my-class1">
+                        {%for a in about_title %}
+                        <h3 align="center"
+
+                            style="color: white; font-size: 17px; border: 2px solid #c88d55; padding: 20px;">{{a.text}}</h3>
+                        {%endfor%}
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="col-lg-9">
+                <div class="attorney-content" style="background: #05122d">
+                    <!--							<iframe style="width:100%; height: 500px;" src="https://www.youtube.com/embed/HavZhfBWhQI?autoplay=1&mute=1&loop=1">-->
+
+                    <!--							</iframe>-->
+                    <!--							<iframe width="100%" height="100%" src="https://www.youtube.com/embed/HavZhfBWhQI?&loop=1;rel=0&amp;controls=1&amp;autoplay=1&amp;mute=1&amp;start=0" frameborder="0"  allow="autoplay; encrypted-media" allowfullscreen=""></iframe>-->
+
+                    <div style="border: 2px solid #c88d55; margin-top: 20px;">
+                        <h2 align="center" style="color: white; ">Новости</h2>
+                        {%for n in home_news%}
+                        <a class="nav-link m-auto" href="{% url 'news' n.pk %}">
+                            <div class="test3" style="background: #fff; border-radius: 10px; padding: 10px;">
+                                <div class="test1"><img src="{{n.image.url}}" alt=""></div>
+                                <div class="test2">
+                                    <h4 style="color: #05122d; "> {{n.title}} </h4>
+
+                                    <p style="color: black; line-height: 1; font-size: 15px; margin-top: -5px;">
+                                        {{n.text|truncatechars:200}}</p>
+                                    <p style="color: black; line-height: 1; font-size: 11px; margin-top: -5px; font-style: italic;">
+                                        {{n.date}}</p>
+                                </div>
+
+                            </div>
+                        </a>
+                        {%endfor%}
+                        <div class="row">
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Attorney Details Area -->
+
+
+</section>
+<!-- End Banner Area -->
+
+
+<!-- Start About Area -->
+<section class="about-area style-two ptb-100">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+
+                <div class="about-img mr-15">
+                    <!--							<div class="solved-cases">-->
+                    <!--								<h3>5+</h3>-->
+                    <!--								<span>года защиты</span>-->
+                    <!--							</div>-->
+
+                    {% for image in about_image %}
+                    <img src="{{ image.image.url }}" alt="Image">
+                    <p></p>
+                    {% endfor %}
+
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="about-content ml-15">
+                    <!--							<span class="top-title">О службе труднадзора</span>-->
+                    {% for i in about_title %}
+                    <h1>{{ i.title }}</h1>
+                    {% for x in about_text %}
+                    <p>{{x.text}}</p>
+                    {% endfor %}
+
+                    <!--							<h3></h3>-->
+                    {% endfor %}
+
+                    <a href="{% url 'structure' %}" class="default-btn">
+                        О Службе
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- End About Area -->
+
+
+<!-- End Privacy policy Area -->
+<section class="ptb-100">
+    <div class="container">
+        <div class="main-content-text">
+
+            {% for title in about_task %}
+            <h1>{{ title.title }}</h1>
+            {% endfor %}
+            <ul>
+
+                {% for text in about_task_text %}
+                <li>
+                    <i class="ri-check-line"></i>
+                    {{text.text}}
+                </li>
+                {%endfor%}
+            </ul>
+
+
+            {%for title in about_power%}
+            <h1>{{title.title}}</h1>
+            {%endfor%}
+            <ul>
+                {%for text in about_power_text%}
+                <li>
+                    <i class="ri-check-line"></i>
+                    {{text.text}}
+                </li>
+                {%endfor%}
+            </ul>
+
+
+        </div>
+    </div>
+</section>
+<!-- End Privacy policy Area -->
+
+<!-- End Our Team Video Area -->
+<div class="our-team-video-area pb-100">
+    <div class="container">
+        <div class="team-bg-video">
+            {% for video in about_video %}
+            <img src="{{ video.image.url }}" alt="Image">
+
+            <div class="video-btns">
+                <a href="{{ video.video }}" class="video-btn popup-youtube">
+                    <i class="ri-play-fill"></i>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- End Our Team Video Area -->
+
+<!-- Start Our Values Area -->
+<!--		<section class="our-values-area bg-color-fafafa pt-100 pb-70">-->
+<!--			<div class="container">-->
+<!--				<div class="section-title">-->
+<!--					<span class="top-title">Опросник</span>-->
+<!--					<h2>Как часто нарушаются ваши трудовые права?</h2>-->
+<!--				</div>-->
+
+<!--				<div class="row justify-content-center">-->
+<!--					<div class="col-lg-3 col-sm-6">-->
+<!--						<div class="single-values border-style">-->
+<!--							<span class="text-stroke">01</span>-->
+<!--							<h3>Раз в день</h3>-->
+<!--							&lt;!&ndash; <p>Vivamus magna justo, lacinia eget consectetur sed, convallis tellus. Nulla libero malesuada.</p> &ndash;&gt;-->
+<!--							&lt;!&ndash; <i class="flaticon-intersection"></i> &ndash;&gt;-->
+<!--						</div>-->
+<!--					</div>-->
+
+<!--					<div class="col-lg-3 col-sm-6">-->
+<!--						<div class="single-values border-style">-->
+<!--							<span class="text-stroke">02</span>-->
+<!--							<h3>Раз в неделю</h3>-->
+<!--							&lt;!&ndash; <p>Vivamus magna justo, lacinia eget consectetur sed, convallis tellus. Nulla libero malesuada.</p>-->
+<!--							<i class="flaticon-law-book"></i> &ndash;&gt;-->
+<!--						</div>-->
+<!--					</div>-->
+
+<!--					<div class="col-lg-3 col-sm-6">-->
+<!--						<div class="single-values border-style">-->
+<!--							<span class="text-stroke">03</span>-->
+<!--							<h3>Раз в месяц</h3>-->
+<!--							&lt;!&ndash; <p>Vivamus magna justo, lacinia eget consectetur sed, convallis tellus. Nulla libero malesuada.</p>-->
+<!--							<i class="flaticon-honesty"></i> &ndash;&gt;-->
+<!--						</div>-->
+<!--					</div>-->
+
+<!--					<div class="col-lg-3 col-sm-6">-->
+<!--						<div class="single-values border-style">-->
+<!--							<span class="text-stroke">04</span>-->
+<!--							<h3>Раз в год</h3>-->
+<!--							&lt;!&ndash; <p>Vivamus magna justo, lacinia eget consectetur sed, convallis tellus. Nulla libero malesuada.</p>-->
+<!--							<i class="flaticon-trust"></i> &ndash;&gt;-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</section>-->
+<!-- End Our Values Area -->
+
+
+<!--		&lt;!&ndash; Start Counter Area &ndash;&gt;-->
+<!--		<section class="counter-area mt-minus-100 pb-100">-->
+<!--			<div class="container">-->
+<!--				<div class="counter-bg bg-color-05122d p-70">-->
+<!--					<span class="counter-title">Как часто нарушаются ваши права?</span>-->
+
+<!--					<div class="row">-->
+<!--						<div class="col-lg-3 col-sm-6">-->
+<!--							<div class="single-counter">-->
+<!--								<h2>-->
+<!--									<span class="odometer" data-count="8500">00</span>-->
+<!--								</h2>-->
+<!--								<h4>Раз в день</h4>-->
+<!--							</div>-->
+<!--						</div>-->
+
+<!--						<div class="col-lg-3 col-sm-6">-->
+<!--							<div class="single-counter">-->
+<!--								<h2>-->
+<!--									<span class="odometer" data-count="2768">00</span>-->
+<!--								</h2>-->
+<!--								<h4>Раз в неделю</h4>-->
+<!--							</div>-->
+<!--						</div>-->
+
+<!--						<div class="col-lg-3 col-sm-6">-->
+<!--							<div class="single-counter">-->
+<!--								<h2>-->
+<!--									<span class="odometer" data-count="1700">00</span>-->
+<!--								</h2>-->
+<!--								<h4>Раз в месяц</h4>-->
+<!--							</div>-->
+<!--						</div>-->
+
+<!--						<div class="col-lg-3 col-sm-6">-->
+<!--							<div class="single-counter">-->
+<!--								<h2>-->
+<!--									<span class="odometer" data-count="310">00</span>-->
+<!--								</h2>-->
+<!--								<h4>Раз в год</h4>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</section>-->
+<!-- End Counter Area -->
+
+
+<!--		&lt;!&ndash; Start Case Studies Area &ndash;&gt;-->
+<!--		<section class="case-studies-area ptb-100">-->
+<!--			<div class="container-fluid">-->
+<!--				<div class="section-title">-->
+<!--					<h2>Последние новости:</h2>-->
+<!--				</div>-->
+
+<!--				<div class="case-slider owl-carousel owl-theme">-->
+<!--					{%for news in home_news%}-->
+<!--					<div class="single-case">-->
+<!--						<img src="{{news.image.url}}" alt="Image">-->
+
+<!--						<div class="case-content">-->
+<!--							<h3>-->
+<!--								<a href="#">-->
+<!--									{{news.title}}-->
+<!--								</a>-->
+<!--							</h3>-->
+<!--							&lt;!&ndash; <span>Прошедшая неделя запомнилась в основном политическими событиями в мировом новостном пространстве. Редакция Kaktus.media подготовила подборку главных мировых новостей за последние семь дней.							</span> &ndash;&gt;-->
+
+<!--							&lt;!&ndash; <a href="#" class="read-more-btn">-->
+<!--								<i class="ri-add-line"></i>-->
+<!--							</a> &ndash;&gt;-->
+<!--						</div>-->
+<!--					</div>-->
+<!--					{%endfor%}-->
+
+
+<!--				</div>-->
+<!--			</div>-->
+<!--		</section>-->
+<!--		&lt;!&ndash; End Case Studies Area &ndash;&gt;-->
+
+<!-- Start Partner Area -->
+<div class="partner-area bg-color-05122d ptb-100">
+    <div class="container">
+        <div class="partner-bg partner-bg-style-two">
+
+            <div class="row">
+                <div class="partner-slider owl-carousel owl-theme">
+                    {%for i in gos_organ%}
+                    <div class="partner-item">
+                        <a href="{{i.link}}">
+                            <img style="max-height: 110px; max-width:100%; height:110px; width: 100%;"
+                                 src="{{i.image.url}}"
+                                 alt="Image">
+                            <p align="center">{{i.name}}</p>
+                        </a>
+                    </div>
+                    {%endfor%}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Partner Area -->
+
+
+{% endblock %}

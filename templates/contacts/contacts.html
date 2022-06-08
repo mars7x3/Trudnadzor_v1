@@ -1,0 +1,131 @@
+
+{% extends 'index.html' %}
+{% load static %}
+
+{%block contact%} active {%endblock%}
+
+{% block page %}
+
+
+
+<!-- Start Page Title Area -->
+		<div class="page-title-area bg-9">
+			<div class="container">
+				<div class="page-title-content">
+					<h2></h2>
+
+					<ul>
+						<li>
+							<a href="{% url 'home' %}">
+
+							</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- End Page Title Area -->
+
+		<!-- End Contact Area -->
+		<section class="contact-area pt-100 pb-70">
+			<div class="container">
+				<div class="row">
+
+					<div  class="col-lg-4 col-sm-6">
+												<h3 align="center">Центральный аппарат</h3>
+						<div  style="border: 2px solid #c88d55; padding: 20px;">
+						{% for c in contacts1 %}
+						<div class="contact-info-single-list">
+							<h6>{{c.title}}</h6>
+
+							<ul>
+
+								<li>
+									<span>Адрес:</span>
+									<p>{{c.address}}</p>
+								</li>
+								<li>
+									<span>Тел: </span>
+									{% for a in phone %}
+									{% if a.contact.id == c.id %}
+									<a href="tel:{{c.phone}}">{{c.phone}}</a>
+									{%endif%}
+									{%endfor%}
+								</li>
+
+								</ul>
+						</div>
+						{% endfor %}
+						</div>
+
+
+
+					</div>
+					<div  class="col-lg-4 col-sm-6">
+											<h3 align="center">Межрегиональное управление по северному региону</h3>
+						<div style="border: 2px solid #c88d55; padding: 20px;">
+						{% for c in contacts2 %}
+						<div class="contact-info-single-list">
+							<h6>{{c.title}}</h6>
+
+							<ul>
+
+								<li>
+									<span>Адрес:</span>
+									<p>{{c.address}}</p>
+								</li>
+								<li>
+									<span>Тел: </span>
+									<a href="tel:+1-(315)-854-3322">{{c.phone}}</a>
+								</li>
+
+								</ul>
+						</div>
+						{% endfor %}
+						</div>
+
+
+
+
+					</div>
+					<div  class="col-lg-4 col-sm-6">
+											<h3 align="center">Межрегиональное управление по южному региону</h3>
+						<div style="border: 2px solid #c88d55; padding: 20px;">
+						{% for c in contacts3 %}
+						<div class="contact-info-single-list">
+							<h6>{{c.title}}</h6>
+
+							<ul>
+
+								<li>
+									<span>Адрес:</span>
+									<p>{{c.address}}</p>
+								</li>
+								<li>
+									<span>Тел: </span>
+									<a href="tel:+1-(315)-854-3322">{{c.phone}}</a>
+								</li>
+
+								</ul>
+						</div>
+						{% endfor %}
+							</div>
+
+
+
+
+					</div>
+
+
+
+				</div>
+
+			</div>
+
+
+
+		</section>
+		<!-- End Contact Area -->
+
+{% endblock %}

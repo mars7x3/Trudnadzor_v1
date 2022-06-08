@@ -1,0 +1,82 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{%block about%} active {%endblock%}
+{%block structure%} active {%endblock%}
+
+{% block page %}
+
+<!-- Start Page Title Area -->
+		<div class="page-title-area bg-11">
+			<div class="container">
+				<div class="page-title-content">
+					<h2></h2>
+
+					<ul>
+						<li>
+							<a href="{% url 'home' %}">
+
+							</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- End Page Title Area -->
+
+<!-- Start Our Values Area -->
+		<section class="our-values-area pt-100 pb-70">
+			<div class="container">
+				<div class="section-title">
+					<h2>Структура: </h2>
+				</div>
+
+
+				<div class="row justify-content-center">
+
+
+					<div class="col-lg-4 col-sm-6">
+						<div class="single-values box-none">
+							{% for c in category3 %}
+							<h3><span>#</span> {{c.title}} </h3>
+							{%endfor%}
+												{% for s in structures3 %}
+							<p>{{s.name}}</p>
+												{%endfor%}
+
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<div class="single-values box-none">
+							{% for c in category2 %}
+							<h3><span>#</span> {{c.title}} </h3>
+							{%endfor%}
+												{%for s in structures2%}
+
+							<p>{{s.name}}</p>
+												{%endfor%}
+
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<div class="single-values box-none">
+							{% for c in category1 %}
+							<h3><span>#</span> {{c.title}} </h3>
+							{%endfor%}
+												{%for s in structures1%}
+
+							<p>{{s.name}}</p>
+												{%endfor%}
+
+						</div>
+					</div>
+
+
+
+				</div>
+			</div>
+		</section>
+		<!-- End Our Values Area -->
+
+{%endblock%}

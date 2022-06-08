@@ -1,0 +1,427 @@
+<!doctype html>
+{% load static %}
+{% load i18n %}
+
+<html lang="zxx">
+    
+<!-- Mirrored from templates.envytheme.com/befaj/default/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 09 Apr 2022 12:06:57 GMT -->
+<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Links Of CSS File -->
+		<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.min.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/css/remixicon.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/css/meanmenu.min.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/css/animate.min.css">
+		<link rel="stylesheet" href="{% static 'assets/css/odometer.min.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/css/magnific-popup.min.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+		
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" href="{% static 'assets/images/favicon.png' %}">
+		<!-- Title -->
+		<title>Труднадзор</title>
+    </head>
+
+    <body>
+		<!-- Start Preloader Area -->
+		<div class="preloader">
+            <div class="content">
+                <div class="box"></div>
+            </div>
+        </div>
+		<!-- End Preloader Area -->
+		
+		<!-- Start Header Area -->
+		<header class="header-area fixed-top">
+			<!-- Start Top Header -->
+			<div class="top-header style-two">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+						<div class="col-lg-6 col-md-6">
+							<ul class="header-left-content">
+								<li>
+									<a href="tel:+996 312 45 40 58">
+										<i class="ri-phone-fill"></i>
+										0312 45 40 58
+									</a>
+								</li>
+								<li>
+										<i class="ri-mail-fill"></i>
+										<span data-cfemail="b3d0dcddc7d2d0c7f3d1d6d5d2d99dd0dcde">trud14@bk.ru</span>
+
+
+								</li>
+
+
+							</ul>
+
+
+						</div>
+
+
+
+
+						<div class="col-lg-6 col-md-6">
+							<div class="header-right-content">
+								<ul>
+									<li>
+										<a href="https://www.facebook.com/trudnadzor" target="_blank">
+											<i class="ri-facebook-fill"></i>
+										</a>
+									</li>
+									<li>
+										<a href="https://www.instagram.com/trudnadzorkg/?igshid=YmMyMTA2M2Y%3D" target="_blank">
+											<i class="ri-instagram-fill"></i>
+										</a>
+									</li>
+
+								</ul>
+
+								<div class="languages-switcher">
+									<i class="ri-global-line"></i>
+									<form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+									<input name="next" type="hidden" value="{{ redirect_to }}">
+									<select name="language">
+										{% get_current_language as LANGUAGE_CODE %}
+										{% get_available_languages as LANGUAGES %}
+										{% get_language_info_list for LANGUAGES as languages %}
+										{% for language in languages %}
+
+											<option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+												{{ language.name_local }} ({{ language.code }})
+											</option>
+										{% endfor %}
+									</select>
+									<input type="submit" value="ОК">
+									</form>
+
+								</div>
+
+
+
+							</div>
+
+
+
+						</div>
+<!--						<div  align="center" style="margin-top: 20px;" class="">-->
+<!--								<h1 style="color:#ffffff; font-size: 50px; font: Arial, sans-serif;">Служба охраны труда</h1>-->
+<!--								</div>-->
+					</div>
+				</div>
+			</div>
+			<!-- Start Top Header -->
+			
+			<!-- Start Navbar Area --> 
+			<div class="navbar-area style-two">
+                <div class="mobile-responsive-nav">
+                    <div class="container">
+                        <div class="mobile-responsive-menu">
+<!--                            <div class="logo">-->
+<!--                                <a href="{% url 'home' %}">-->
+<!--									<img style="height: 68px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Emblem_of_Kyrgyzstan.svg/200px-Emblem_of_Kyrgyzstan.svg.png" alt="logo">-->
+<!--								</a>-->
+<!--                            </div>-->
+
+							<!-- <div class="others-options-for-mobile-devices">
+								<ul>
+									<li>
+										<button type="button" class="search-btn" data-bs-toggle="modal" data-bs-target="#exampleModalsrc">
+											<i class="ri-search-line"></i>
+										</button>
+									</li>
+									<li>
+										<a href="#" class="default-btn">
+											<i class="me-2 ms-0 ri-calendar-2-line"></i>
+											<span>Можно что-то написать</span>
+										</a>
+									</li>
+								</ul>
+							</div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="desktop-nav style-two">
+                    <div class="container-fluid">
+                        <nav class="navbar navbar-expand-md navbar-light">
+<!--                            <a class="navbar-brand" href="{% url 'home' %}">-->
+<!--                                <img style="height: 100px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Emblem_of_Kyrgyzstan.svg/200px-Emblem_of_Kyrgyzstan.svg.png" alt="logo">-->
+<!--                            </a>-->
+
+                            <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                                <ul class="navbar-nav m-auto">
+									<!-- <li class="nav-item">
+										<a href="index-2.html" class="nav-link active">
+											Главная 
+										</a>
+
+                                        
+									</li> -->
+									<li class="nav-item">
+										<a href="{% url 'home' %}" class="nav-link{%block home%}{%endblock%}">Главная</a>
+									</li>
+
+									<li class="nav-item">
+										<a class="nav-link {%block about%}{%endblock%} dropdown-toggle">
+											О Службе
+										</a>
+
+										<ul class="dropdown-menu">
+
+											<li class="nav-item">
+												<a href="{% url 'management' %}" class="nav-link{%block manager%}{%endblock%}">Руководство</a>
+											</li>
+											<li class="nav-item">
+												<a href="{% url 'history' %}" class="nav-link{%block history%}{%endblock%}">История</a>
+											</li>
+											<li class="nav-item">
+												<a href="{% url 'structure' %}" class="nav-link{%block structure%}{%endblock%}">Структура</a>
+											</li>
+
+
+										</ul>
+									</li>
+
+
+
+									<li class="nav-item">
+										<a class="nav-link {%block active%}{%endblock%} dropdown-toggle">
+											Деятельность
+										</a>
+
+										<ul class="dropdown-menu">
+											<li class="nav-item">
+												<a href="{% url 'news' %}" class="nav-link{%block news%}{%endblock%}">Новости </a>
+											</li>
+											<li class="nav-item">
+												<a href="{% url 'statistic' %}" class="nav-link{%block statistic%}{%endblock%}">Статистика</a>
+											</li>
+											<li class="nav-item">
+												<a href="{% url 'activities' %}" class="nav-link{%block faq%}{%endblock%}">Часто задаваемые вопросы</a>
+											</li>
+											<li class="nav-item">
+												<a href="{% url 'gallery' %}" class="nav-link{%block gallery%}{%endblock%}">Галерея</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link dropdown-toggle">
+													Ссылки на НПА
+												</a>
+												<ul class="dropdown-menu">
+
+													<li class="nav-item">
+														<a target="_blank" href="http://cbd.minjust.gov.kg/act/view/ru-ru/1505" class="nav-link">Трудовой кодекс КР</a>
+													</li>
+												</ul>
+
+											</li>
+
+
+
+										</ul>
+									</li>
+
+									<li class="nav-item">
+										<a href="{% url 'mail' %}" class="nav-link{%block mail%}{%endblock%}">
+											Электронное обращение
+										</a>
+
+
+									</li>
+
+									<li class="nav-item">
+										<a href="{% url 'partners' %}" class="nav-link{%block partners%}{%endblock%}">Партнеры</a>
+									</li>
+									<li class="nav-item">
+										<a href="{% url 'job' %}" class="nav-link{%block job%}{%endblock%}">Вакансии</a>
+									</li>
+
+                                    <li class="nav-item">
+										<a href="{% url 'contacts' %}" class="nav-link{%block contact%}{%endblock%}">Контакты</a>
+									</li>
+                                </ul>
+
+
+                            </div>
+                        </nav>
+                    </div>
+				</div>
+            </div>
+			<!-- End Navbar Area -->
+		</header>
+		<!-- End Header Area -->
+
+
+
+		<!-- Start Banner Area -->
+		{% block page %} {% endblock %}
+		
+		<!-- Start Footer Area -->
+		<footer class="footer-area style-two pt-100 pb-70">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6">
+						<div class="single-footer-widget">
+							<a href="{% url 'home' %}" class="logo">
+								<img style="height: 100px;" src="{% static 'assets/images/logo.png' %}" alt="Image">
+							</a>
+
+							<p>Защита трудовых прав граждан и интересы работодателей</p>
+
+							<ul class="social-link">
+								<li>
+									<a href="https://www.facebook.com/trudnadzor" target="_blank">
+										<i class="ri-facebook-fill"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.instagram.com/trudnadzorkg/?igshid=YmMyMTA2M2Y%3D" target="_blank">
+										<i class="ri-instagram-line"></i>
+									</a>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6">
+						<div class="single-footer-widget">
+							<h3>Контакты</h3>
+
+							<ul class="address">
+								<li>
+									<i class="ri-phone-fill"></i>
+									<a href="tel:+996 312 45 40 58">0312 45 40 58</a>
+								</li>
+								<li>
+									<i class="ri-mail-fill"></i>
+									<span data-cfemail="ddb5b8b1b1b29dbfb8bbbcb7f3beb2b0">trud14@bk.ru</span>
+								</li>
+								<li class="location">
+									<i class="ri-map-pin-line"></i>
+									г.Бишкек, Московская 197
+								</li>
+								<li class="location">
+									<i class="ri-time-line"></i>
+									Пн - Пт: 09:00 - 18:00
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6">
+						<div class="single-footer-widget">
+							<h3>Полезные ссылки
+							</h3>
+
+							<ul class="import-link">
+								<li>
+									<a href="{% url 'home' %}">
+										Главная
+									</a>
+								</li>
+								<li>
+									<a href="{% url 'news' %}">
+										Новости
+									</a>
+								</li>
+								<li>
+									<a href="{% url 'contacts' %}">
+										Контакты
+									</a>
+								</li>
+								<li>
+									<a href="{% url 'mail' %}">
+										Электронное обращение
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- <div class="col-lg-3 col-md-6">
+						<div class="single-footer-widget">
+							<h3>Subscribe</h3>
+							<p class="mb-25">Follow our newsletter to stay updated about consulting.</p>
+
+							<form class="newsletter-form" data-toggle="validator">
+								<input type="email" class="form-control" placeholder="Email address" name="EMAIL" required autocomplete="off">
+	
+								<button class="submit-btn" type="submit">
+									<i class="ri-send-plane-fill"></i>
+								</button>
+	
+								<div id="validator-newsletter" class="form-result"></div>
+							</form>	
+						</div>
+					</div> -->
+				</div>
+			</div>
+		</footer>
+		<!-- End Footer Area -->
+
+		<!-- Start Copy Right Area -->
+		<div class="copy-right-area style-two">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-8">
+						<p>
+							Copyright @2022 Trudnadzor. Designed By
+							<a href="http://asoi.kg/" target="_blank">ASOI studio</a>
+						</p>
+					</div>
+
+					<!-- <div class="col-lg-4">
+						<div class="terms-privacy">
+							<ul>
+								<li>
+									<a href="terms-conditions.html">Электро</a>
+								</li>
+								<li>
+									<a href="privacy-policy.html">Privacy Policy</a>
+								</li>
+							</ul>
+						</div>
+					</div> -->
+				</div>
+			</div>
+		</div>
+		<!-- End Copy Right Area -->
+		
+		<!-- Start Go Top Area -->
+		<div class="go-top">
+			<i class="ri-arrow-up-s-fill"></i>
+			<i class="ri-arrow-up-s-fill"></i>
+		</div>
+		<!-- End Go Top Area -->
+
+        <!-- Links of JS File -->
+        <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="{% static 'assets/js/jquery.min.js' %}"></script>
+        <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+		<script src="{% static 'assets/js/meanmenu.min.js' %}"></script>
+		<script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+		<script src="{% static 'assets/js/carousel-thumbs.min.js' %}"></script>
+        <script src="{% static 'assets/js/wow.min.js' %}"></script>
+        <script src="{% static 'assets/js/appear.min.js' %}"></script>
+        <script src="{% static 'assets/js/odometer.min.js' %}"></script>
+        <script src="{% static 'assets/js/magnific-popup.min.js' %}"></script>
+        <script src="{% static 'assets/js/simple-load-more.js' %}"></script>
+        <script src="{% static 'assets/js/mixitup.min.js' %}"></script>
+		<script src="{% static 'assets/js/form-validator.min.js' %}"></script>
+		<script src="{% static 'assets/js/contact-form-script.js' %}"></script>
+		<script src="{% static 'assets/js/ajaxchimp.min.js' %}"></script>
+		<script src="{% static 'assets/js/custom.js' %}"></script>
+		<script src="{% static 'assets/js/test.js' %}"></script>
+
+
+    </body>
+
+<!-- Mirrored from templates.envytheme.com/befaj/default/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 09 Apr 2022 12:08:12 GMT -->
+</html>
