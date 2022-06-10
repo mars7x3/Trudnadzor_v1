@@ -38,9 +38,7 @@
 
 					<div class="col-lg-4 col-sm-6">
 						<div class="single-values box-none">
-							{% for c in category3 %}
-							<h3><span>#</span> {{c.title}} </h3>
-							{%endfor%}
+							<h3><span>#</span> {{category3.title}} </h3>
 												{% for s in structures3 %}
 							<p>{{s.name}}</p>
 												{%endfor%}
@@ -49,9 +47,7 @@
 					</div>
 					<div class="col-lg-4 col-sm-6">
 						<div class="single-values box-none">
-							{% for c in category2 %}
-							<h3><span>#</span> {{c.title}} </h3>
-							{%endfor%}
+							<h3><span>#</span> {{category2.title}} </h3>
 												{%for s in structures2%}
 
 							<p>{{s.name}}</p>
@@ -61,9 +57,7 @@
 					</div>
 					<div class="col-lg-4 col-sm-6">
 						<div class="single-values box-none">
-							{% for c in category1 %}
-							<h3><span>#</span> {{c.title}} </h3>
-							{%endfor%}
+							<h3><span>#</span> {{category1.title}} </h3>
 												{%for s in structures1%}
 
 							<p>{{s.name}}</p>

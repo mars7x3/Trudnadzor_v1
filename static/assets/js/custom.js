@@ -9,7 +9,12 @@
 	// Header Sticky, Go To Top JS
 	$(window).on('scroll', function() {
 		// Header Sticky JS
-		if ($(this).scrollTop() >150){  
+		if ($(this).scrollTop() >120){
+		    $('.header-container').addClass('scale-hidden')
+		}else{
+		    $('.header-container').removeClass('scale-hidden')
+		};
+		if ($(this).scrollTop() >78){
 			$('.navbar-area').addClass("is-sticky");
 		}
 		else{

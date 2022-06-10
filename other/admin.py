@@ -13,7 +13,11 @@ class ContactAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Contact, ContactAdmin)
-admin.site.register(CategoryContact)
+
+
+@admin.register(CategoryContact)
+class MailAdmin(admin.ModelAdmin):
+    list_display = ('department', 'id')
 
 
 @admin.register(Mail1)

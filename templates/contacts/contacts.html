@@ -33,7 +33,7 @@
 				<div class="row">
 
 					<div  class="col-lg-4 col-sm-6">
-												<h3 align="center">Центральный аппарат</h3>
+												<h3 align="center">{{category1.department}}</h3>
 						<div  style="border: 2px solid #c88d55; padding: 20px;">
 						{% for c in contacts1 %}
 						<div class="contact-info-single-list">
@@ -49,7 +49,7 @@
 									<span>Тел: </span>
 									{% for a in phone %}
 									{% if a.contact.id == c.id %}
-									<a href="tel:{{c.phone}}">{{c.phone}}</a>
+									<a href="tel:{{a.phone}}">{{a.phone}}<br></a>
 									{%endif%}
 									{%endfor%}
 								</li>
@@ -63,7 +63,8 @@
 
 					</div>
 					<div  class="col-lg-4 col-sm-6">
-											<h3 align="center">Межрегиональное управление по северному региону</h3>
+																	<h3 align="center">{{category2.department}}</h3>
+
 						<div style="border: 2px solid #c88d55; padding: 20px;">
 						{% for c in contacts2 %}
 						<div class="contact-info-single-list">
@@ -77,7 +78,11 @@
 								</li>
 								<li>
 									<span>Тел: </span>
-									<a href="tel:+1-(315)-854-3322">{{c.phone}}</a>
+									{% for a in phone %}
+									{% if a.contact.id == c.id %}
+									<a href="tel:{{a.phone}}">{{a.phone}}<br></a>
+									{%endif%}
+									{%endfor%}
 								</li>
 
 								</ul>
@@ -90,7 +95,8 @@
 
 					</div>
 					<div  class="col-lg-4 col-sm-6">
-											<h3 align="center">Межрегиональное управление по южному региону</h3>
+																		<h3 align="center">{{category3.department}}</h3>
+
 						<div style="border: 2px solid #c88d55; padding: 20px;">
 						{% for c in contacts3 %}
 						<div class="contact-info-single-list">
@@ -104,7 +110,11 @@
 								</li>
 								<li>
 									<span>Тел: </span>
-									<a href="tel:+1-(315)-854-3322">{{c.phone}}</a>
+									{% for a in phone %}
+									{% if a.contact.id == c.id %}
+									<a href="tel:{{a.phone}}">{{a.phone}}<br></a>
+									{%endif%}
+									{%endfor%}
 								</li>
 
 								</ul>

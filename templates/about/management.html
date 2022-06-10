@@ -1,6 +1,7 @@
 
 {% extends 'index.html' %}
 {% load static %}
+{% load i18n %}
 
 {%block about%} active {%endblock%}
 {%block manager%} active {%endblock%}
@@ -32,7 +33,7 @@
 		<section class="our-professionals-area ptb-100">
 			<div class="container">
 				<div class="section-title">
-					<h2>Руководство</h2>
+					<h2>{% trans 'Жетекчилер' %}</h2>
 				</div>
 
 				<div class="row justify-content-center">

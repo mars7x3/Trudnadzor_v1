@@ -53,8 +53,8 @@
 									</a>
 								</li>
 								<li>
-										<i class="ri-mail-fill"></i>
-										<span data-cfemail="b3d0dcddc7d2d0c7f3d1d6d5d2d99dd0dcde">trud14@bk.ru</span>
+										<i style="color: #fff" class="ri-mail-fill"></i>
+										<a href="mail:trud14@bk.ru" data-cfemail="b3d0dcddc7d2d0c7f3d1d6d5d2d99dd0dcde">trud14@bk.ru</a>
 
 
 								</li>
@@ -88,18 +88,18 @@
 									<i class="ri-global-line"></i>
 									<form action="{% url 'set_language' %}" method="post">{% csrf_token %}
 									<input name="next" type="hidden" value="{{ redirect_to }}">
-									<select name="language">
+									<select name="language" onchange="this.form.submit()">
 										{% get_current_language as LANGUAGE_CODE %}
 										{% get_available_languages as LANGUAGES %}
 										{% get_language_info_list for LANGUAGES as languages %}
 										{% for language in languages %}
 
 											<option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
-												{{ language.name_local }} ({{ language.code }})
+												{{ language.name_local }}
 											</option>
 										{% endfor %}
 									</select>
-									<input type="submit" value="ОК">
+<!--									<input type="submit" value="ОК">-->
 									</form>
 
 								</div>
@@ -111,6 +111,13 @@
 
 
 						</div>
+						<div class="header-container">
+			<div class="gerb"><a href="http://gosstroy.gov.kg/ru/"><img src="http://gosstroy.gov.kg/wp-content/themes/gs-theme/images/gerb135x135.png" alt=""></a></div>
+			<div class="site-name"><h3>{% trans 'КЫРГЫЗ РЕСПУБЛИКАСЫНЫН ЭМГЕК, СОЦИАЛДЫК КАМСЫЗДОО ЖАНА МИГРАЦИЯ МИНИСТРЛИГИНЕ КАРАШТУУ ЭМГЕК МЫЙЗАМДАРЫН КОНТРОЛДОО ЖАНА КӨЗӨМӨЛДӨӨ БОЮНЧА КЫЗМАТЫ' %}<br><br></h3></div>
+			<div id="logo-head">
+				<a href="#"><img src="{% static 'assets/images/logo.png' %}" alt=""></a>
+			</div>
+		</div>
 <!--						<div  align="center" style="margin-top: 20px;" class="">-->
 <!--								<h1 style="color:#ffffff; font-size: 50px; font: Arial, sans-serif;">Служба охраны труда</h1>-->
 <!--								</div>-->
@@ -119,7 +126,7 @@
 			</div>
 			<!-- Start Top Header -->
 			
-			<!-- Start Navbar Area --> 
+			<!-- Start Navbar Area -->
 			<div class="navbar-area style-two">
                 <div class="mobile-responsive-nav">
                     <div class="container">
@@ -166,24 +173,24 @@
                                         
 									</li> -->
 									<li class="nav-item">
-										<a href="{% url 'home' %}" class="nav-link{%block home%}{%endblock%}">Главная</a>
+										<a href="{% url 'home' %}" class="nav-link{%block home%}{%endblock%}">{% trans 'Башкы' %}</a>
 									</li>
 
 									<li class="nav-item">
 										<a class="nav-link {%block about%}{%endblock%} dropdown-toggle">
-											О Службе
+											{% trans 'Кызмат жөнүндө' %}
 										</a>
 
 										<ul class="dropdown-menu">
 
 											<li class="nav-item">
-												<a href="{% url 'management' %}" class="nav-link{%block manager%}{%endblock%}">Руководство</a>
+												<a href="{% url 'management' %}" class="nav-link{%block manager%}{%endblock%}">{% trans 'Жетекчилер' %}</a>
 											</li>
 											<li class="nav-item">
-												<a href="{% url 'history' %}" class="nav-link{%block history%}{%endblock%}">История</a>
+												<a href="{% url 'history' %}" class="nav-link{%block history%}{%endblock%}">{% trans 'Тарых' %}</a>
 											</li>
 											<li class="nav-item">
-												<a href="{% url 'structure' %}" class="nav-link{%block structure%}{%endblock%}">Структура</a>
+												<a href="{% url 'structure' %}" class="nav-link{%block structure%}{%endblock%}">{% trans 'Структура' %}</a>
 											</li>
 
 
@@ -194,30 +201,30 @@
 
 									<li class="nav-item">
 										<a class="nav-link {%block active%}{%endblock%} dropdown-toggle">
-											Деятельность
+											{% trans 'Активдүүлүк' %}
 										</a>
 
 										<ul class="dropdown-menu">
 											<li class="nav-item">
-												<a href="{% url 'news' %}" class="nav-link{%block news%}{%endblock%}">Новости </a>
+												<a href="{% url 'news' %}" class="nav-link{%block news%}{%endblock%}">{% trans 'Жанылыктар' %} </a>
 											</li>
 											<li class="nav-item">
 												<a href="{% url 'statistic' %}" class="nav-link{%block statistic%}{%endblock%}">Статистика</a>
 											</li>
 											<li class="nav-item">
-												<a href="{% url 'activities' %}" class="nav-link{%block faq%}{%endblock%}">Часто задаваемые вопросы</a>
+												<a href="{% url 'activities' %}" class="nav-link{%block faq%}{%endblock%}">{% trans 'Көп берилүүчү суроолор' %}</a>
 											</li>
 											<li class="nav-item">
 												<a href="{% url 'gallery' %}" class="nav-link{%block gallery%}{%endblock%}">Галерея</a>
 											</li>
 											<li class="nav-item">
 												<a class="nav-link dropdown-toggle">
-													Ссылки на НПА
+													{% trans 'НПАларга шилтемелер' %}
 												</a>
 												<ul class="dropdown-menu">
 
 													<li class="nav-item">
-														<a target="_blank" href="http://cbd.minjust.gov.kg/act/view/ru-ru/1505" class="nav-link">Трудовой кодекс КР</a>
+														<a target="_blank" href="http://cbd.minjust.gov.kg/act/view/ru-ru/1505" class="nav-link">{% trans 'Кыргыз Республикасынын Эмгек кодекси' %}</a>
 													</li>
 												</ul>
 
@@ -230,21 +237,21 @@
 
 									<li class="nav-item">
 										<a href="{% url 'mail' %}" class="nav-link{%block mail%}{%endblock%}">
-											Электронное обращение
+											{% trans 'Электрондук кайрылуу' %}
 										</a>
 
 
 									</li>
 
 									<li class="nav-item">
-										<a href="{% url 'partners' %}" class="nav-link{%block partners%}{%endblock%}">Партнеры</a>
+										<a href="{% url 'partners' %}" class="nav-link{%block partners%}{%endblock%}">{% trans 'Партнерлор' %}</a>
 									</li>
 									<li class="nav-item">
-										<a href="{% url 'job' %}" class="nav-link{%block job%}{%endblock%}">Вакансии</a>
+										<a href="{% url 'job' %}" class="nav-link{%block job%}{%endblock%}">{% trans 'Жумуштар' %}</a>
 									</li>
 
                                     <li class="nav-item">
-										<a href="{% url 'contacts' %}" class="nav-link{%block contact%}{%endblock%}">Контакты</a>
+										<a href="{% url 'contacts' %}" class="nav-link{%block contact%}{%endblock%}">{% trans 'Байланыштар' %}</a>
 									</li>
                                 </ul>
 
@@ -273,7 +280,7 @@
 								<img style="height: 100px;" src="{% static 'assets/images/logo.png' %}" alt="Image">
 							</a>
 
-							<p>Защита трудовых прав граждан и интересы работодателей</p>
+							<p>{% trans 'Жумушчулардын эмгек укуктарын жана иш берүүчүлөрдүн кызыкчылыктарын коргоо' %}</p>
 
 							<ul class="social-link">
 								<li>
@@ -306,11 +313,11 @@
 								</li>
 								<li class="location">
 									<i class="ri-map-pin-line"></i>
-									г.Бишкек, Московская 197
+									{% trans 'ш.Бишкек, Московская 197' %}
 								</li>
 								<li class="location">
 									<i class="ri-time-line"></i>
-									Пн - Пт: 09:00 - 18:00
+									{% trans 'Дш - Жм: 09:00 - 18:00' %}
 								</li>
 							</ul>
 						</div>
@@ -318,28 +325,28 @@
 
 					<div class="col-lg-3 col-md-6">
 						<div class="single-footer-widget">
-							<h3>Полезные ссылки
+							<h3>{% trans 'Пайдалуу шилтемелер' %}
 							</h3>
 
 							<ul class="import-link">
 								<li>
 									<a href="{% url 'home' %}">
-										Главная
+										{% trans 'Башкы' %}
 									</a>
 								</li>
 								<li>
 									<a href="{% url 'news' %}">
-										Новости
+										{% trans 'Жанылыктар' %}
 									</a>
 								</li>
 								<li>
 									<a href="{% url 'contacts' %}">
-										Контакты
+										{% trans 'Байланыштар' %}
 									</a>
 								</li>
 								<li>
 									<a href="{% url 'mail' %}">
-										Электронное обращение
+										{% trans 'Электрондук кайрылуу' %}
 									</a>
 								</li>
 							</ul>

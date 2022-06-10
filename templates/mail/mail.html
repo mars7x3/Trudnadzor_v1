@@ -1,6 +1,7 @@
 
 {% extends 'index.html' %}
 {% load static %}
+{% load i18n %}
 
 {%block mail%} active {%endblock%}
 
@@ -28,7 +29,7 @@
 		<section class="our-values-area pt-100 pb-70">
 			<div class="container">
 				<div class="section-title">
-					<h2>Электронное обращение</h2>
+					<h2>{% trans 'Электрондук кайрылуу' %}</h2>
 				</div>
 
 				<div align="center" class="row justify-content-center">
@@ -37,8 +38,7 @@
 						<div class="single-values box-none">
 							<a href="{%url 'v1'%}">
 							<i class="flaticon-trust"></i>
-							<h3> Правила подачи обращений</h3>
-							<p>Правила подачи обращений</p>
+							<h3> {% trans 'Апелляциялык даттанууларды берүү эрежелери' %}</h3>
 							</a>
 						</div>
 					</div>
@@ -47,8 +47,7 @@
 						<div class="single-values box-none">
 							<a href="{%url 'v2'%}">
 							<i class="flaticon-honesty"></i>
-							<h3> Физическое лицо</h3>
-							<p>Электронное обращение для физических лиц</p>
+							<h3> {% trans 'Жеке адам' %}</h3>
 							</a>
 						</div>
 					</div>
@@ -57,8 +56,7 @@
 						<div class="single-values box-none">
 							<a href="{%url 'v3'%}">
 							<i class="flaticon-law-book"></i>
-							<h3> Юридическое лицо</h3>
-							<p>Электронное обращение для юридических лиц</p>
+							<h3> {% trans 'Юридикалык жак' %}</h3>
 							</a>
 						</div>
 					</div>

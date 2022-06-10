@@ -2,7 +2,7 @@ from urllib.parse import urljoin
 
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.core.mail import send_mail
 from django.views import View
 from .forms import MailForm, MailForm2
@@ -35,10 +35,16 @@ def contacts(request):
     contact1 = Contact.objects.filter(department=1)
     contact2 = Contact.objects.filter(department=2)
     contact3 = Contact.objects.filter(department=3)
+    category1 = get_object_or_404(CategoryContact, id=1)
+    category2 = get_object_or_404(CategoryContact, id=2)
+    category3 = get_object_or_404(CategoryContact, id=3)
+
     phone = PhoneContact.objects.all()
 
     return render(request, 'contacts/contacts.html', {"contacts1": contact1, "contacts2": contact2,
-                                                      "contacts3": contact3, "phone": phone})
+                                                      "contacts3": contact3, "phone": phone,
+                                                      'category1': category1, 'category2': category2,
+                                                      'category3': category3})
 
 
 def job(request):

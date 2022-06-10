@@ -1,6 +1,6 @@
 {% extends 'index.html' %}
 {% load static %}
-
+{% load i18n %}
 {%block news%} active {%endblock%}
 
 {% block page %}
@@ -85,7 +85,7 @@
 
 
 							<div class="sidebar-widget recent-post">
-								<h3 class="widget-title">Последние новости:</h3>
+								<h3 class="widget-title">{% trans 'Акыркы жанылыктар' %}:</h3>
 
 								<ul>
 									{% for r in recommendation %}
