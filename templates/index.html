@@ -112,10 +112,10 @@
 
 						</div>
 						<div class="header-container">
-			<div class="gerb"><a href="{% url 'home' %}"><img src="http://gosstroy.gov.kg/wp-content/themes/gs-theme/images/gerb135x135.png" alt=""></a></div>
+			<div class="gerb"><a href="{% url 'home' %}"><img src="{% static 'assets/images/gerb1.png' %}" alt=""></a></div>
 			<div class="site-name"><h3>{% trans 'КЫРГЫЗ РЕСПУБЛИКАСЫНЫН ЭМГЕК, СОЦИАЛДЫК КАМСЫЗДОО ЖАНА МИГРАЦИЯ МИНИСТРЛИГИНЕ КАРАШТУУ ЭМГЕК МЫЙЗАМДАРЫН КОНТРОЛДОО ЖАНА КӨЗӨМӨЛДӨӨ БОЮНЧА КЫЗМАТЫ' %}<br><br></h3></div>
 			<div id="logo-head">
-				<a href="#"><img src="{% static 'assets/images/logo.png' %}" alt=""></a>
+				<a href="{% url 'home' %}"><img src="{% static 'assets/images/logo.png' %}" alt=""></a>
 			</div>
 		</div>
 <!--						<div  align="center" style="margin-top: 20px;" class="">-->
