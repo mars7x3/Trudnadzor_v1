@@ -1,3 +1,4 @@
+from django.db.models import Q
 from django.shortcuts import render
 from django.views.generic import DetailView
 
@@ -18,6 +19,7 @@ class NewsDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
-        context['recommendation'] = News.objects.all().order_by('-date')[:6]
+        now_news = self.get_object()
+        context['recommendation'] = News.objects.filter(~Q(id=now_news.id)).order_by('-date')[:6]
         return context
 

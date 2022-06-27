@@ -88,3 +88,6 @@ class Mail2(models.Model):
         verbose_name_plural = 'Обращения Юр лица'
         verbose_name = 'Обращение Юр лицо'
 
+#
+# class Job(models.Model):
+#
