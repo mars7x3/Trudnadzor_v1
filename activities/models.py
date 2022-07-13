@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class FAQ(models.Model):
+class Question(models.Model):
     question = models.TextField(verbose_name='Вопрос')
     answer = models.TextField(verbose_name='Ответ')
 
@@ -19,10 +19,10 @@ class Gallery(models.Model):
     image = models.ImageField(upload_to='gallery', verbose_name='Фото')
 
     def __str__(self):
-        return self.title
+        return f'{self.id}. {self.title}'
 
     class Meta:
-        ordering = ['id', ]
+        ordering = ['-id', ]
         verbose_name_plural = 'Галерея'
         verbose_name = 'Галерея'
 

@@ -31,7 +31,7 @@ class Exp(models.Model):
 
 
 class History(models.Model):
-    history = models.TextField()
+    history = models.TextField(verbose_name='Текст')
 
     def __str__(self):
         return 'История'
@@ -46,7 +46,7 @@ class Category(models.Model):
     title = models.CharField(max_length=250, verbose_name='Структура')
 
     def __str__(self):
-        return self.title
+        return f'{self.id}. {self.title}'
 
     class Meta:
         ordering = ['id', ]

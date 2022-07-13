@@ -50,11 +50,13 @@ class Mail1(models.Model):
     first_name = models.CharField(max_length=100, verbose_name='Фамилия')
     name = models.CharField(max_length=100, verbose_name='Имя')
     last_name = models.CharField(max_length=100, blank=True, null=True, verbose_name='Отчество')
+    pin = models.CharField(max_length=100, blank=True, null=True, verbose_name='ПИН')
     email = models.CharField(max_length=100, verbose_name='Почта')
     phone = models.CharField(max_length=100, verbose_name='Телефон')
     address = models.CharField(max_length=100, verbose_name='Адрес')
     text = models.TextField(verbose_name='Текст')
     file = models.FileField(upload_to='email_files', blank=True, null=True, verbose_name='Файл')
+    type_of_mail = models.CharField(max_length=50, verbose_name='Вид обращения', blank=True, null=True)
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -78,6 +80,7 @@ class Mail2(models.Model):
     address = models.CharField(max_length=100, verbose_name='Адрес')
     text = models.TextField(verbose_name='Текст')
     file = models.FileField(upload_to='email_files', blank=True, null=True, verbose_name='Файл')
+    type_of_mail = models.CharField(max_length=50, verbose_name='Вид обращения', blank=True, null=True)
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

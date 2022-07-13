@@ -1,5 +1,6 @@
 {% extends 'index.html' %}
 {% load static %}
+{% load i18n %}
 
 {%block job%} active {%endblock%}
 
@@ -35,7 +36,7 @@
                 <h2 class="accordion-header" id="heading3">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                       Приложение №1
+                       {% trans 'Борбордук аппарат боюнча' %}
                     </button>
                 </h2>
                 <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
@@ -245,7 +246,7 @@
                 <h2 class="accordion-header" id="heading2">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                       Приложение №2
+                       {% trans 'Түндүк региону боюнча' %}
                     </button>
                 </h2>
                 <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
@@ -457,7 +458,8 @@
                 <h2 class="accordion-header" id="heading1">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                       Приложение №3
+                       {% trans 'Түштүк региону боюнча' %}
+
                     </button>
                 </h2>
                 <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"

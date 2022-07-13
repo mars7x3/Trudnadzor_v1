@@ -25,3 +25,8 @@ class CategoryTranslation(TranslationOptions):
 @register(Structure)
 class StructureTranslation(TranslationOptions):
     fields = ('name', )
+
+
+@register(History)
+class HistoryTranslation(TranslationOptions):
+    fields = ('history', )

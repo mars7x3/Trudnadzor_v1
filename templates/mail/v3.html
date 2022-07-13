@@ -34,7 +34,7 @@
 				<div class="row">
 					<div class="main-content-text">
 					<h3 align="center">{% trans 'Урматтуу сайттын колдонуучулары!' %}<br>
-{% trans 'Сизди эмгек мыйзамдарын көзөмөлдөө жана көзөмөлдөө кызматына интернет аркылуу кайрылуу жөнөтө турган портал тосуп алат.' %}</h3>
+{% trans 'Эмгек мыйзамдарын контролдоо жана көзөмөлдөө боюнча кызматына интернет аркылуу кайрылуу жөнөтө турган порталына кош келиниздер!' %}</h3>
 
 					<div class="gap-20"></div>
 
@@ -59,7 +59,7 @@
 								<div class="col-lg-6 col-sm-6">
 									<div class="form-group">
 										<fieldset>
-										<input name="organ" type="text" class="form-control" placeholder="Уюмдун аталышы" required="">
+										<input name="organ" type="text" class="form-control" placeholder="{% trans 'Уюмдун аталышы' %}" required="">
 										</fieldset>
 									</div>
 								</div>
@@ -73,7 +73,7 @@
 								<div class="col-lg-6 col-sm-6">
 									<div class="form-group">
 										<fieldset>
-										<input name="position" type="text" class="form-control" placeholder="Кызматы" required="">
+										<input name="position" type="text" class="form-control" placeholder="{% trans 'Ээлеген кызматы'%}" required="">
 										</fieldset>
 									</div>
 								</div>
@@ -89,7 +89,7 @@
 								<div class="col-lg-6 col-sm-6">
 									<div class="form-group">
 										<fieldset>
-										<input name="name" type="text" class="form-control" placeholder="Аты" required="">
+										<input name="name" type="text" class="form-control" placeholder="{% trans 'Аты'%}" required="">
 										</fieldset>
 									</div>
 								</div>
@@ -97,7 +97,7 @@
 								<div class="col-lg-6 col-sm-6">
 									<div class="form-group">
 										<fieldset>
-										<input name="last_name" type="text" class="form-control" placeholder="Атасынын аты" >
+										<input name="last_name" type="text" class="form-control" placeholder="{% trans 'Атасынын аты'%}" >
 										</fieldset>
 									</div>
 								</div>
@@ -123,10 +123,18 @@
 										</fieldset>
 									</div>
 								</div>
+								<div class="col-lg-6 col-sm-6">
+									<div class="form-group">
+										<select name="type_of_mail" class="form-select form-control" aria-label="Default select example">
+											<option value="{% trans 'Даттануу' %}">{% trans 'Даттануу' %}</option>
+											<option value="{% trans 'Түшүндүрмө' %}">{% trans 'Түшүндүрмө' %}</option>
+										</select>
+									</div>
+								</div>
 								<div class="col-lg-12 col-sm-6">
 									<div class="form-group">
 										<fieldset>
-										<input name="file" type="file" class="form-control" placeholder="Прикрепить файл">
+										<input name="file" type="file" class="form-control">
 										</fieldset>
 									</div>
 								</div>
@@ -134,7 +142,7 @@
 								<div class="col-12">
 									<div class="form-group">
 										<fieldset>
-										<textarea name="text" class="form-control" rows="6" placeholder="Текст" required=""></textarea>
+										<textarea name="text" class="form-control" rows="6" placeholder="{% trans 'Тексти'%}" required=""></textarea>
 										</fieldset>
 									</div>
 								</div>

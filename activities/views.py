@@ -3,7 +3,7 @@ from .models import *
 
 
 def activities_view(request):
-    activities = FAQ.objects.all()
+    activities = Question.objects.all()
     context = {"activities": activities}
     return render(request, 'activities/FAQ.html', context)
 

@@ -37,19 +37,19 @@
 						<div  style="border: 2px solid #c88d55; padding: 20px;">
 						{% for c in contacts1 %}
 						<div class="contact-info-single-list">
-							<h6>{{c.title}}</h6>
+							<h4>{{c.title}}</h4>
 
 							<ul>
 
 								<li>
-									<span>Адрес:</span>
-									<p>{{c.address}}</p>
+									<span style="font-size: 20px; font-family: Times New Roman, serif;">Адрес:</span>
+									<p style="font-size: 20px; font-family: Times New Roman, serif;">{{c.address}}</p>
 								</li>
 								<li>
-									<span>Тел: </span>
+									<span style="font-size: 20px; font-family: Times New Roman, serif;">Тел: </span>
 									{% for a in phone %}
 									{% if a.contact.id == c.id %}
-									<a href="tel:{{a.phone}}">{{a.phone}}<br></a>
+									<a style="font-size: 20px; font-family: Times New Roman, serif;" href="tel:{{a.phone}}">{{a.phone}}<br></a>
 									{%endif%}
 									{%endfor%}
 								</li>
@@ -68,19 +68,19 @@
 						<div style="border: 2px solid #c88d55; padding: 20px;">
 						{% for c in contacts2 %}
 						<div class="contact-info-single-list">
-							<h6>{{c.title}}</h6>
+							<h4>{{c.title}}</h4>
 
 							<ul>
 
 								<li>
-									<span>Адрес:</span>
-									<p>{{c.address}}</p>
+									<span style="font-size: 20px; font-family: Times New Roman, serif;">Адрес:</span>
+									<p style="font-size: 20px; font-family: Times New Roman, serif;">{{c.address}}</p>
 								</li>
 								<li>
-									<span>Тел: </span>
+									<span style="font-size: 20px; font-family: Times New Roman, serif;">Тел: </span>
 									{% for a in phone %}
 									{% if a.contact.id == c.id %}
-									<a href="tel:{{a.phone}}">{{a.phone}}<br></a>
+									<a style="font-size: 20px; font-family: Times New Roman, serif;" href="tel:{{a.phone}}">{{a.phone}}<br></a>
 									{%endif%}
 									{%endfor%}
 								</li>
@@ -100,19 +100,19 @@
 						<div style="border: 2px solid #c88d55; padding: 20px;">
 						{% for c in contacts3 %}
 						<div class="contact-info-single-list">
-							<h6>{{c.title}}</h6>
+							<h4>{{c.title}}</h4>
 
 							<ul>
 
 								<li>
-									<span>Адрес:</span>
-									<p>{{c.address}}</p>
+									<span style="font-size: 20px; font-family: Times New Roman, serif;">Адрес:</span>
+									<p style="font-size: 20px; font-family: Times New Roman, serif;">{{c.address}}</p>
 								</li>
 								<li>
-									<span>Тел: </span>
+									<span style="font-size: 20px; font-family: Times New Roman, serif;">Тел: </span>
 									{% for a in phone %}
 									{% if a.contact.id == c.id %}
-									<a href="tel:{{a.phone}}">{{a.phone}}<br></a>
+									<a style="font-size: 20px; font-family: Times New Roman, serif;" href="tel:{{a.phone}}">{{a.phone}}<br></a>
 									{%endif%}
 									{%endfor%}
 								</li>

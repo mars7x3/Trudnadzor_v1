@@ -30,12 +30,12 @@ def history(request):
 
 
 def structure(request):
-    structures1 = Structure.objects.filter(category=9)
-    structures2 = Structure.objects.filter(category=8)
-    structures3 = Structure.objects.filter(category=7)
-    category1 = get_object_or_404(Category, id=9)
-    category2 = get_object_or_404(Category, id=8)
-    category3 = get_object_or_404(Category, id=7)
+    structures1 = Structure.objects.filter(category=3)
+    structures2 = Structure.objects.filter(category=2)
+    structures3 = Structure.objects.filter(category=1)
+    category1 = Category.objects.get(id=3)
+    category2 = Category.objects.get(id=2)
+    category3 = Category.objects.get(id=1)
 
     context = {"structures1": structures1, "structures2": structures2, "structures3": structures3,
                'category1': category1, 'category2': category2, 'category3': category3}

@@ -444,11 +444,11 @@ Header Area Style
 
 .top-header .header-left-content li a {
   color: #ffffff;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 .top-header .header-left-content li a i {
-  font-size: 14px;
+  font-size: 24px;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
   color: #c88d55;
@@ -486,10 +486,10 @@ Header Area Style
 .top-header .header-right-content .languages-switcher i {
   position: absolute;
   left: 0;
-  top: 4px;
+  top: -7px;
   color: #c88d55;
   margin-right: 0;
-  font-size: 14px;
+  font-size: 24px;
 }
 
 .top-header .header-right-content .languages-switcher select {
@@ -498,7 +498,7 @@ Header Area Style
   border: none !important;
   cursor: pointer;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 .top-header .header-right-content .languages-switcher select option {
@@ -531,7 +531,7 @@ Header Area Style
 }
 
 .top-header .header-right-content ul li a i {
-  font-size: 14px;
+  font-size: 24px;
   color: #c88d55;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
@@ -2320,9 +2320,6 @@ Partner Area Style
 }
 
 .partner-item img {
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
-  opacity: 0.5;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
   cursor: pointer;
@@ -2677,6 +2674,7 @@ Footer Area Style
 .single-footer-widget p {
   margin-bottom: 18px;
   color: #dddddd;
+  font-size: 20px;
 }
 
 .single-footer-widget .mb-25 {
@@ -2741,6 +2739,7 @@ Footer Area Style
   position: relative;
   color: #dddddd;
   padding-left: 30px;
+  font-size: 20px;
 }
 
 .single-footer-widget .address li i {
@@ -2772,6 +2771,7 @@ Footer Area Style
 
 .single-footer-widget .import-link li {
   margin-bottom: 23px;
+  font-size: 20px;
 }
 
 .single-footer-widget .import-link li a {
@@ -4366,11 +4366,14 @@ Case Studies Details Style
 Attorney Details Style
 =====================================================*/
 .attorney-details{
-    width: 300px;
+    width: 400px;
     margin: 0 auto;
+    text-align: center;
 }
+
 .attorney-details img {
-  margin-bottom: 20px;
+  width: 300px;
+  margin: 0 auto 20px;
 }
 
 .attorney-details h3 {
@@ -4874,9 +4877,10 @@ justify-content: start;
  margin-right: 20px;
  }
  .test1 img{
- width: 320px;
- height: 160px;
+    width: 300px;
+    height: 180px;
  max-width: 320px;
+ object-fit: cover;
  }
 
 #background-video{
@@ -4970,4 +4974,8 @@ overflow: auto;
 }
 .vacancy table span {
     padding: 10px 35px;
+}
+
+.ri-mail-fill{
+font-size: 24px;
 }

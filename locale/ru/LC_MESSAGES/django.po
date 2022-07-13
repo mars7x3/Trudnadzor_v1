@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-10 16:45+0600\n"
+"POT-Creation-Date: 2022-07-13 20:14+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,7 +33,7 @@ msgid "Туулган күнү"
 msgstr "Дата рождения"
 
 #: templates/about/management-detail.html:51
-msgid "Жергиликтүү"
+msgid "Туулган жери"
 msgstr "Уроженец"
 
 #: templates/about/management-detail.html:54
@@ -52,25 +52,24 @@ msgstr "Образование"
 msgid "Иш тажрыйба"
 msgstr "Опыт работы"
 
-#: templates/about/management.html:36 templates/index.html:187
+#: templates/about/management.html:34 templates/index.html:194
 msgid "Жетекчилер"
 msgstr "Руководство"
 
-#: templates/home/home.html:55 templates/index.html:283
+#: templates/home/home.html:55 templates/index.html:293
 msgid ""
 "Жумушчулардын эмгек укуктарын жана иш берүүчүлөрдүн кызыкчылыктарын коргоо"
 msgstr "Защита трудовых прав работников и интересов работодателей"
 
-#: templates/home/home.html:64 templates/index.html:209
-#: templates/index.html:339 templates/news/news.html:34
-msgid "Жанылыктар"
+#: templates/home/home.html:64 templates/index.html:216
+msgid "Жаңылыктар"
 msgstr "Новости"
 
 #: templates/home/home.html:133
-msgid "Кызмат жонундо"
-msgstr "О Службе"
+msgid "Кызматтын структурасы"
+msgstr "Структура Службы"
 
-#: templates/index.html:116
+#: templates/index.html:123
 msgid ""
 "КЫРГЫЗ РЕСПУБЛИКАСЫНЫН ЭМГЕК, СОЦИАЛДЫК КАМСЫЗДОО ЖАНА МИГРАЦИЯ "
 "МИНИСТРЛИГИНЕ КАРАШТУУ ЭМГЕК МЫЙЗАМДАРЫН КОНТРОЛДОО ЖАНА КӨЗӨМӨЛДӨӨ БОЮНЧА "
@@ -79,69 +78,89 @@ msgstr ""
 "СЛУЖБА ПО КОНТРОЛЮ И НАДЗОРУ ТРУДОВОГО ЗАКОНОДАТЕЛЬСТВА ПРИ МИНИСТЕРСТВЕ "
 "ТРУДА, СОЦИАЛЬНОГО ОБЕСПЕЧЕНИЯ И МИГРАЦИИ КЫРГЫЗСКОЙ РЕСПУБЛИКИ"
 
-#: templates/index.html:176 templates/index.html:334
+#: templates/index.html:183 templates/index.html:349
 msgid "Башкы"
 msgstr "Главная"
 
-#: templates/index.html:181
+#: templates/index.html:188
 msgid "Кызмат жөнүндө"
 msgstr "О Службе"
 
-#: templates/index.html:190
+#: templates/index.html:197
 msgid "Тарых"
 msgstr "История"
 
-#: templates/index.html:193
+#: templates/index.html:200
 msgid "Структура"
 msgstr "Структура"
 
-#: templates/index.html:204
-msgid "Активдүүлүк"
+#: templates/index.html:211
+msgid "Ишмердүүлүк"
 msgstr "Деятельность"
 
-#: templates/index.html:215
+#: templates/index.html:222
 msgid "Көп берилүүчү суроолор"
 msgstr "Часто задаваемые вопросы"
 
-#: templates/index.html:222
+#: templates/index.html:229
 msgid "НПАларга шилтемелер"
 msgstr "Ссылки на НПА"
 
-#: templates/index.html:227
+#: templates/index.html:234
 msgid "Кыргыз Республикасынын Эмгек кодекси"
-msgstr "Трудовой кодекс КР"
+msgstr "Трудовой кодекс Кыргызской Республики"
 
-#: templates/index.html:240 templates/index.html:349
+#: templates/index.html:240
+msgid "Текшерүү баракча"
+msgstr "Проверочный лист"
+
+#: templates/index.html:250 templates/index.html:364
 #: templates/mail/mail.html:32
 msgid "Электрондук кайрылуу"
 msgstr "Электронное обращение"
 
-#: templates/index.html:247
+#: templates/index.html:257
 msgid "Партнерлор"
 msgstr "Партнеры"
 
-#: templates/index.html:250
-msgid "Жумуштар"
+#: templates/index.html:260
+msgid "Вакансиялар"
 msgstr "Вакансии"
 
-#: templates/index.html:254 templates/index.html:344
+#: templates/index.html:264 templates/index.html:359
 msgid "Байланыштар"
 msgstr "Контакты"
 
-#: templates/index.html:316
-msgid "ш.Бишкек, Московская 197"
+#: templates/index.html:331
+msgid "Бишкек ш., Москва көч. 197"
 msgstr "г.Бишкек, Московская 197"
 
-#: templates/index.html:320
+#: templates/index.html:335
 msgid "Дш - Жм: 09:00 - 18:00"
 msgstr "Пн - Пт: 09:00 - 18:00"
 
-#: templates/index.html:328
+#: templates/index.html:343
 msgid "Пайдалуу шилтемелер"
 msgstr "Полезные ссылки"
 
+#: templates/index.html:354 templates/news/news.html:34
+msgid "Жанылыктар"
+msgstr "Новости"
+
+#: templates/job/job.html:39
+msgid "Борбордук аппарат боюнча"
+msgstr "По центральному аппарату"
+
+#: templates/job/job.html:249
+msgid "Түндүк региону боюнча"
+msgstr "По северному региону"
+
+#: templates/job/job.html:461
+msgid "Түштүк региону боюнча"
+msgstr "По южному региону"
+
 #: templates/mail/mail.html:41
-msgid "Апелляциялык даттанууларды берүү эрежелери"
+msgid "Даттанууларды берүү эрежелери"
 msgstr "Правила подачи обращений"
 
 #: templates/mail/mail.html:50
@@ -265,27 +284,51 @@ msgstr ""
 
 #: templates/mail/v2.html:40 templates/mail/v3.html:37
 msgid ""
-"Сизди эмгек мыйзамдарын көзөмөлдөө жана көзөмөлдөө кызматына интернет "
-"аркылуу кайрылуу жөнөтө турган портал тосуп алат."
+"Эмгек мыйзамдарын контролдоо жана көзөмөлдөө боюнча кызматына интернет "
+"аркылуу кайрылуу жөнөтө турган порталына кош келиниздер!"
 msgstr ""
 "Вас приветствует Портал, где Вы можете направлять свои интернет - обращения "
-"в адрес Службы по контролю и надзору трудового законодательства."
+"в адрес Службы по контролю и надзору трудового законодательства"
 
-#: templates/mail/v2.html:72
+#: templates/mail/v2.html:72 templates/mail/v3.html:92
 msgid "Аты"
 msgstr "Имя"
 
-#: templates/mail/v2.html:80
+#: templates/mail/v2.html:80 templates/mail/v3.html:100
 msgid "Атасынын аты"
 msgstr "Отчество"
 
-#: templates/mail/v2.html:102
+#: templates/mail/v2.html:88
+msgid "ЖИН"
+msgstr "ПИН"
+
+#: templates/mail/v2.html:110
 msgid "Дареги"
 msgstr "Адрес"
 
-#: templates/mail/v2.html:125 templates/mail/v3.html:145
+#: templates/mail/v2.html:118 templates/mail/v3.html:129
+msgid "Даттануу"
+msgstr "Жалоба"
+
+#: templates/mail/v2.html:119 templates/mail/v3.html:130
+msgid "Түшүндүрмө"
+msgstr "Разъяснение"
+
+#: templates/mail/v2.html:143 templates/mail/v3.html:153
 msgid "Билдирүү жөнөтүү"
 msgstr "Отправить обращение"
+
+#: templates/mail/v3.html:62
+msgid "Уюмдун аталышы"
+msgstr "Наименование организации"
+
+#: templates/mail/v3.html:76
+msgid "Ээлеген кызматы"
+msgstr "Должность"
+
+#: templates/mail/v3.html:145
+msgid "Тексти"
+msgstr "Текст"
 
 #: templates/news/news-detail.html:88
 msgid "Акыркы жанылыктар"
@@ -299,6 +342,5 @@ msgstr "Наши партнеры"
 msgid "Бардыгы"
 msgstr "Все"
 
-#~ msgid ""
-#~ "Жарандардын эмгек укуктарын жана иш берүүчүлөрдүн кызыкчылыктарын коргоо"
-#~ msgstr "Защита трудовых прав граждан и интересы работодателей"
+#~ msgid "Файлды тиркөө"
+#~ msgstr "Прикрепить файл"

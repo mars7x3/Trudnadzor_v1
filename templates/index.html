@@ -17,14 +17,14 @@
 		<link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
 		<link rel="stylesheet" href="{% static 'assets/css/remixicon.css' %}">
 		<link rel="stylesheet" href="{% static 'assets/css/meanmenu.min.css' %}">
-		<link rel="stylesheet" href="{% static 'assets/css/animate.min.css">
+		<link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
 		<link rel="stylesheet" href="{% static 'assets/css/odometer.min.css' %}">
 		<link rel="stylesheet" href="{% static 'assets/css/magnific-popup.min.css' %}">
 		<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
 		<link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
 		
 		<!-- Favicon -->
-		<link rel="icon" type="image/png" href="{% static 'assets/images/favicon.png' %}">
+		<link rel="icon" type="image/png" href="http://trudnadzor.kg/static/assets/images/logo.png">
 		<!-- Title -->
 		<title>Труднадзор</title>
     </head>
@@ -53,8 +53,9 @@
 									</a>
 								</li>
 								<li>
-										<i style="color: #fff" class="ri-mail-fill"></i>
-										<a href="mail:trud14@bk.ru" data-cfemail="b3d0dcddc7d2d0c7f3d1d6d5d2d99dd0dcde">trud14@bk.ru</a>
+									<a href="mail:trud14@bk.ru" data-cfemail="b3d0dcddc7d2d0c7f3d1d6d5d2d99dd0dcde">
+										<i class="ri-mail-fill"></i>
+										trud14@bk.ru</a>
 
 
 								</li>
@@ -207,12 +208,12 @@
 
 									<li class="nav-item">
 										<a class="nav-link {%block active%}{%endblock%} dropdown-toggle">
-											{% trans 'Активдүүлүк' %}
+											{% trans 'Ишмердүүлүк' %}
 										</a>
 
 										<ul class="dropdown-menu">
 											<li class="nav-item">
-												<a href="{% url 'news' %}" class="nav-link{%block news%}{%endblock%}">{% trans 'Жанылыктар' %} </a>
+												<a href="{% url 'news' %}" class="nav-link{%block news%}{%endblock%}">{% trans 'Жаңылыктар' %} </a>
 											</li>
 											<li class="nav-item">
 												<a href="{% url 'statistic' %}" class="nav-link{%block statistic%}{%endblock%}">Статистика</a>
@@ -235,6 +236,9 @@
 												</ul>
 
 											</li>
+											<li class="nav-item">
+												<a target="_blank" href="{% static 'assets/files/prov_list.pdf' %}" class="nav-link">{% trans 'Текшерүү баракча' %}</a>
+											</li>
 
 
 
@@ -253,7 +257,7 @@
 										<a href="{% url 'partners' %}" class="nav-link{%block partners%}{%endblock%}">{% trans 'Партнерлор' %}</a>
 									</li>
 									<li class="nav-item">
-										<a href="{% url 'job' %}" class="nav-link{%block job%}{%endblock%}">{% trans 'Жумуштар' %}</a>
+										<a href="{% url 'job' %}" class="nav-link{%block job%}{%endblock%}">{% trans 'Вакансиялар' %}</a>
 									</li>
 
                                     <li class="nav-item">
@@ -280,13 +284,13 @@
 		<footer class="footer-area style-two pt-100 pb-70">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-3 col-md-6">
-						<div class="single-footer-widget">
+					<div class="col-lg-4 col-md-6">
+						<div style="text-align: center;" class="single-footer-widget">
 							<a href="{% url 'home' %}" class="logo">
-								<img style="height: 100px;" src="{% static 'assets/images/logo.png' %}" alt="Image">
+								<img  style="height: 100px; display: center;" src="{% static 'assets/images/logo.png' %}" alt="Image">
 							</a>
 
-							<p>{% trans 'Жумушчулардын эмгек укуктарын жана иш берүүчүлөрдүн кызыкчылыктарын коргоо' %}</p>
+							<p >{% trans 'Жумушчулардын эмгек укуктарын жана иш берүүчүлөрдүн кызыкчылыктарын коргоо' %}</p>
 
 							<ul class="social-link">
 								<li>
@@ -309,9 +313,9 @@
 						</div>
 					</div>
 
-					<div class="col-lg-3 col-md-6">
+					<div class="col-lg-4 col-md-6">
 						<div class="single-footer-widget">
-							<h3>Контакты</h3>
+							<h3>Байланыштар</h3>
 
 							<ul class="address">
 								<li>
@@ -324,7 +328,7 @@
 								</li>
 								<li class="location">
 									<i class="ri-map-pin-line"></i>
-									{% trans 'ш.Бишкек, Московская 197' %}
+									{% trans 'Бишкек ш., Москва көч. 197' %}
 								</li>
 								<li class="location">
 									<i class="ri-time-line"></i>
@@ -334,7 +338,7 @@
 						</div>
 					</div>
 
-					<div class="col-lg-3 col-md-6">
+					<div class="col-lg-4 col-md-6">
 						<div class="single-footer-widget">
 							<h3>{% trans 'Пайдалуу шилтемелер' %}
 							</h3>
@@ -391,7 +395,7 @@
 				<div class="row align-items-center">
 					<div class="col-lg-8">
 						<p>
-							Copyright @2022 Trudnadzor. Designed By
+							Copyright @2022 <a href="http://trudnadzor.kg"> Trudnadzor.kg</a>. Designed By
 							<a href="http://asoi.kg/" target="_blank">ASOI studio</a>
 						</p>
 					</div>

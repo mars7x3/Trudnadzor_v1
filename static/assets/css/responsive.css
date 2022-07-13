@@ -700,6 +700,8 @@
     .site-name h3{
         font-size: 18px !important;
     }
+    .attorney-details{
+    width: auto;}
 }
 
 /* Min width 576px to Max width 767px */
@@ -707,6 +709,8 @@
   .container-fluid {
     max-width: 540px !important;
   }
+     .attorney-details{
+    width: auto;}
   /* Hero Case */
   .hero-slider-area .thumbs-wrap {
     max-width: 545px;

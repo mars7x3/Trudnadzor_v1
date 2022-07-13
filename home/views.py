@@ -14,7 +14,7 @@ def home(request):
     about_task_image = TaskImage.objects.all()
     about_power = Power.objects.all()
     about_power_text = PowerText.objects.all()
-    home_news = News.objects.all().order_by('-date')[:6]
+    home_news = News.objects.all().order_by('-date')
     partners = Partner.objects.all()
     gos_organ = GosOrgan.objects.all()
     context = {"about_text": about_text, "about_title": about_title, "about_image": about_image,

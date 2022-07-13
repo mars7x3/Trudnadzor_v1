@@ -26,3 +26,7 @@ class CategoryAdmin(TranslationAdmin):
     pass
 
 
+@admin.register(History)
+class HistoryAdmin(TranslationAdmin):
+    pass
+

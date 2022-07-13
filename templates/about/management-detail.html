@@ -39,25 +39,25 @@
 						<div class="attorney-details">
 							<img src="{{ management.image.url }}" alt="Image">
 							<h3>{{ management.name }}</h3>
-							<span>{{ management.position }}</span>
+							<span style="font-size: 16px;">{{ management.position }}</span>
 
 
 
 							<ul class="info-list">
-								<li>
-									<span>{% trans 'Туулган күнү'%}: </span> {{management.date}}
+								<li style="font-size: 16px;">
+									<span style="font-size: 16px;">{% trans 'Туулган күнү'%}: </span> {{management.date}}
+								</li>
+								<li style="font-size: 16px;">
+									<span style="font-size: 16px;">{% trans 'Туулган жери'%}: </span> {{management.city}}
 								</li>
 								<li>
-									<span>{% trans 'Жергиликтүү'%}: </span> {{management.city}}
+									<span style="font-size: 16px;">{% trans 'Улуту'%}:</span> {{management.national}}
 								</li>
-								<li>
-									<span>{% trans 'Улуту'%}:</span> {{management.national}}
+								<li style="font-size: 16px;">
+									<span style="font-size: 16px;">Телефон:</span>{{management.address}}
 								</li>
-								<li>
-									<span>Телефон:</span>{{management.address}}
-								</li>
-								<li>
-									<span>{% trans 'Үй-бүлөлүк абал'%}:</span> {{management.family}}
+								<li style="font-size: 16px;">
+									<span style="font-size: 16px;">{% trans 'Үй-бүлөлүк абал'%}:</span> {{management.family}}
 								</li>
 							</ul>
 
@@ -71,18 +71,18 @@
 							<ul class="educations">
 							{%for e in edu %}
 								{%if e.management.id == management.id %}
-								<li>{{e.education}}</li>
+								<li style="font-size: 18px; font-weight: normal;">{{e.education}}</li>
 								{%endif%}
 								{%endfor%}
 							</ul>
 
 
-							<h3>{% trans 'Иш тажрыйба'%}:</h3>
+							<h3 style="margin-top: 20px;">{% trans 'Иш тажрыйба'%}:</h3>
 							<ul class="educations">
 							{%for e in exp %}
 								{%if e.management.id == management.id %}
 
-								<li>{{e.exp}}</li>
+								<li style="font-size: 18px; font-weight: normal;">{{e.exp}}</li>
 								{%endif%}
 								{%endfor%}
 							</ul>
