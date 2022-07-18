@@ -66,3 +66,5 @@ class Structure(models.Model):
         verbose_name_plural = 'Сотрудники'
         verbose_name = 'Сотрудники'
 
+
+

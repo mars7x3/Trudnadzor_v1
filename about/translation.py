@@ -30,3 +30,5 @@ class StructureTranslation(TranslationOptions):
 @register(History)
 class HistoryTranslation(TranslationOptions):
     fields = ('history', )
+
+
